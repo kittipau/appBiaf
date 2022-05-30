@@ -1,8 +1,11 @@
 package com.example.appBiaf.Fragments;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,19 +19,24 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.ListFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.appBiaf.Cliente;
 import com.example.appBiaf.R;
+import com.example.appBiaf.adaptadores.Adaptador;
 import com.example.appBiaf.databinding.FragmentParticipantesBinding;
+
+import java.util.ArrayList;
 
 import pojos.Participante;
 
-public class ParticipantesFragment extends ListFragment {
+public class ParticipantesFragment extends Fragment {
 
-    ListView listView;
-    String[] elementos = {"Maria Magdalena", "Jesucristo Superstar", "Diosito", "La Virgen María", "Domingo de resurreción", "Hércules"};
-    Participante[] listaParticipantes;
-    String[] nombre;
-    ImageView[] imagenes;
+    RecyclerView recyclerView;
+    Participante p;
+
+    Adaptador adaptador;
     private FragmentParticipantesBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -37,27 +45,26 @@ public class ParticipantesFragment extends ListFragment {
         binding = FragmentParticipantesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        String[] nombre;
+        recyclerView = root.findViewById(R.id.reciclerview);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
+        Cliente cliente = new Cliente();
+        cliente.setOpcion("6");
+        cliente.start();
+
+
+        adaptador = new Adaptador(cliente.getListaParticipantes()) {
+        };
+        recyclerView.setAdapter(adaptador);
         return root;
     }
 
-
     @Override
-    public void onActivityCreated(Bundle state) {
-        super.onActivityCreated(state);
-        listView = (ListView) getActivity().findViewById(R.id.listview);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_expandable_list_item_1, elementos);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity().getApplicationContext(), String.valueOf(position), Toast.LENGTH_SHORT).show();
-
-            }
-        });
     }
 
     @Override

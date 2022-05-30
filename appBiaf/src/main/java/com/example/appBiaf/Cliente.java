@@ -13,6 +13,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.net.Socket;
+import java.util.Date;
 import java.util.ArrayList;
 
 public class Cliente extends Thread {
@@ -21,8 +22,17 @@ public class Cliente extends Thread {
     Usuario usuario;
     Participante participante;
     Configuracion configuracion;
+    ArrayList<Participante> listaParticipantes;
 
     public Cliente() {
+    }
+
+    public ArrayList<Participante> getListaParticipantes() {
+        return listaParticipantes;
+    }
+
+    public void setListaParticipantes(ArrayList<Participante> listaParticipantes) {
+        this.listaParticipantes = listaParticipantes;
     }
 
     public Participante getParticipante() {
@@ -71,19 +81,31 @@ public class Cliente extends Thread {
             OutputStream os = socketCliente.getOutputStream();
             DataOutputStream dos = new DataOutputStream(os);
 
-
+            //opciones que solo mandan un usuario par insertrlo o eliminarlo
             if (opcion.equals("1") || opcion.equals("2")){
                 dos.writeUTF(opcion);
                 InsertaryEliminar(socketCliente,usuario);
 
+            //opciones para recuperar un participante
             } else if (opcion.equals("3")){
-                //iniciar sesión
                 dos.writeUTF(opcion);
-                mostrarDisenador(socketCliente, participante);
+                mostrarParticipante(socketCliente, participante);
 
-            } else if (opcion.equals("4") || opcion.equals("5"))
+            //opciones para buscr usuarios, ya sea solo por nombre o por nombre y contraseña
+            } else if (opcion.equals("4") || opcion.equals("5")) {
                 dos.writeUTF(opcion);
                 IniciarSesion(socketCliente, usuario);
+
+            // opcion para listar participantes
+            }else if (opcion.equals("6")){
+                dos.writeUTF(opcion);
+                listarDisenadores(socketCliente);
+            } else if (opcion.equals("7")){
+                dos.writeUTF("7");
+                horaFin(socketCliente);
+
+
+            }
 
             socketCliente.close();
         } catch (IOException e) {
@@ -126,7 +148,7 @@ public class Cliente extends Thread {
         return usuario;
     }
 
-    public Participante mostrarDisenador (Socket socketCliente, Participante p) {
+    public Participante mostrarParticipante (Socket socketCliente, Participante p) {
         try {
 
             //El cliente contruye el objeto y lo envia al servidor
@@ -146,20 +168,31 @@ public class Cliente extends Thread {
     }
 
     public ArrayList<Participante> listarDisenadores (Socket socketCliente) {
-        ArrayList<Participante> listadisenadores = new ArrayList<Participante>();
-
         try {
 
             //Espero la lista
             ObjectInputStream ois = new ObjectInputStream(socketCliente.getInputStream());
-            listadisenadores = (ArrayList<Participante>) ois.readObject();
+            listaParticipantes = (ArrayList<Participante>) ois.readObject();
 
             //Se cierra la comunicación
             ois.close();
         } catch (IOException | ClassNotFoundException ex) {
             System.out.println(ex.getMessage());
         }
-        return listadisenadores;
+        return listaParticipantes;
+    }
+
+    public Configuracion horaFin (Socket socketCliente) {
+        try {
+            //Espero la lista
+            ObjectInputStream ois = new ObjectInputStream(socketCliente.getInputStream());
+            configuracion = (Configuracion) ois.readObject();
+            //Se cierra la comunicación
+            ois.close();
+        } catch (IOException | ClassNotFoundException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return configuracion;
     }
 
     }
