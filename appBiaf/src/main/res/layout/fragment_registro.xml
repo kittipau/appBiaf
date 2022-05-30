@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.RegistroFragment"
+    >
+
+    <TextView
+        android:id="@+id/nav_iniciosesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/gothic"
+        android:text="@string/menu_registro"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/separador"
+        app:layout_constraintTop_toBottomOf="@+id/nav_iniciosesion"
+        tools:layout_editor_absoluteX="0dp"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="674dp"
+        android:background="@drawable/marmol"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav_iniciosesion">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="116dp"
+            android:background="#20000000"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Regusuario"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/registrouser"
+                app:errorEnabled="true"
+                app:helperTextEnabled="true"
+                app:hintTextColor="?android:attr/textColorHint">
+
+                <!-- Editext para insertar el usuario-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Regusuario2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#90FFFFFF" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Contenedor  para insertar el mail-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Regemail"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@id/Regusuario"
+                android:hint="@string/registroemail"
+                app:errorEnabled="true"
+                app:helperTextEnabled="true"
+                app:hintTextColor="?android:attr/textColorHint">
+
+                <!-- Editext para insertar el mail-->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Regemail2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#90FFFFFF"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Contenedor  para insertar la contraseña-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Regcontraseña"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@id/Regemail"
+                android:hint="@string/registrocontraseña"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                app:helperTextEnabled="true">
+
+                <!-- Editext para insertar la contraseña-->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Regcontraseña2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#90FFFFFF"
+
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Contenedor  para insertar la validación de la contraseña-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/RegRepcontraseña"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@id/Regcontraseña"
+                android:hint="@string/registrocontraseña2"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                app:helperTextEnabled="true">
+
+                <!-- Editext para insertar la validación de la contraseña-->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/RegRepcontraseña2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#90FFFFFF"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Boton para registrar el usuario-->
+
+            <Button
+                android:id="@+id/buttonRegistrar"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/RegRepcontraseña"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/registroRegistrar"
+                android:textColor="@color/black" />
+
+            <!-- Textview para poner los campos en blanco-->
+
+            <TextView
+                android:id="@+id/registrores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonRegistrar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/registroRestablecer"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

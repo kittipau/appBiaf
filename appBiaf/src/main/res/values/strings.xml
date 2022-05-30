@@ -1,0 +1,137 @@
+<resources>
+    <string name="app_name">BIAF</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">BIAF</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_disenadores">Diseñadores</string>
+    <string name="menu_diseno">Diseños</string>
+    <string name="menu_votaciones">Votación</string>
+    <string name="menu_sobrenosotros">SOBRE NOSOTROS</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_concurso_nav">Concurso</string>
+
+
+    <string name="texto_inicio">PASIÓN, ARTESANÍA Y LEGADO</string>
+
+    <!-- texto del concurso -->
+    <string name="sobreconcurso0">CONCURSO</string>
+    <string name="sobreconcurso1">El concurso internacional de diseno de moda de BIAAF está dirigido a diseñadores emergentes de todo el mundo de entre 18 y 35 años, tiene una periodicidad bienal y cuenta con la colaboración y especial asesoramiento de profesionales de prestigio en los ámbitos de la moda y la cultura.</string>
+    <string name="sobreconcurso2">El carácter internacional de BIAAF pretende favorecer el enriquecimiento intercultural y la promoción de la moda como auténtico bien cultural, en estrecha relación con los valores artísticos. Por ello, todos los trabajos presentados a concurso deben aportar como valor añadido el estar inspirados o relacionados directamente con el mundo del arte.</string>
+    <string name="sobreconcurso3">Como diseñador/a podrás participar en dos categorias: prendas de vestir y accesorios / complementos. Cabe la posibilidad de que un mismo participante se presente a las dos categorías, eso sí, la participación deberá ser individual.</string>
+    <string name="sobreconcurso4">Premios:</string>
+    <string name="sobreconcurso5">– Mejor Prenda de Vestir: 10.000€</string>
+    <string name="sobreconcurso6">– Mejor Accesorio: 10.000€</string>
+    <string name="sobreconcurso8">– Mejor Diseñador Emergente Vasco: 5.000€</string>
+    <string name="sobreconcurso9">Por favor, lee detenidamente las bases de la convocatoria  y calendario de esta edición, donde explicamos los plazos y formatos de entrega de los trabajos, así como cuestiones logísticas.
+
+</string>
+    <string name="sobreconcurso10">CALENDARIO PREVISTO</string>
+    <string name="sobreconcurso11">El concurso internacional de BIAAF tiene carácter bienal, las inscripciones estarán abiertas desde el 1 de octubre hasta el 15 de diciembre de 2021, ambos inclusive. Puedes seguir todas las novedades en nuestro apartado de actualidad y en nuestras redes sociales: Facebook, Twitter e Instagram.</string>
+    <string name="sobreconcurso12">1. Un Jurado elegido por Bilbao International Art and Fashion BIAAF seleccionará un total de 30 finalistas de entre todos los participantes en ambas categorías.</string>
+    <string name="sobreconcurso13">2. En la segunda ronda, un jurado internacional reunido por BIAAF para la ocasión seleccionará un/a ganador/a de cada categoría de entre los 30 finalistas.</string>
+    <string name="sobreconcurso14">1 de octubre al 15 de diciembre de 2021: Inscripciones al concurso internacional</string>
+    <string name="sobreconcurso15">14 de febrero de 2022: Último día de envío de trabajos para la primera sesión de jurado.</string>
+    <string name="sobreconcurso16">Marzo 2022: Reunión del jurado y selección de los 30 finalistas</string>
+    <string name="sobreconcurso17">Abirl 2022: Último día de recepción en nuestras instalaciones de trabajos para la sesión final de jurado.</string>
+    <string name="sobreconcurso18">Junio 2022: El jurado internacional se reúne para elegir los ganadores de cada categoría de entre los 30 finalistas.</string>
+    <string name="sobreconcurso19">Junio 2022: Exposición de los trabajos finalistas y ganadores y ceremonia de entrega de premios.</string>
+    <string name="sobreconcurso20">CALENDARIO PREVISTO</string>
+    <string name="sobreconcurso21">CALENDARIO PREVISTO</string>
+
+
+    <!-- Strings de sobre nosotros -->
+    <string name="sobrenosotros">Bilbao International Art and Fashion – BIAAF es una plataforma dedicada a descubrir, apoyar y lanzar diseñadores emergentes de moda de todo el mundo que demuestren en sus creaciones altas dosis de talento, innovación y creatividad.</string>
+    <string name="sobrenosotros0">Nuestro objetivo principal es dar a los diseñadores emergentes visibilidad internacional tanto dentro de la industria de la moda, como al público general y a los medios de comunicación.</string>
+
+    <string name="sobrenosotros1">Nos mantenemos en contacto permanente con jóvenes diseñadores, escuelas de diseno y profesionales de la industria de la moda de reconocido prestigio y ámbito internacional, desarrollando actividades como el concurso de diseno de moda Bilbao International Art and Fashion, foros, conferencias, cursos en escuelas de reconocido prestigio internacional, etc.</string>
+
+
+    <!-- Strings del loggin -->
+    <string name="loginusuario">Usuario </string>
+    <string name="logincontra">Contraseña</string>
+    <string name="loginiciar">Iniciar sesión</string>
+    <string name="loginregistrar">Registrar</string>
+
+    <!--Títulos -->
+    <string name="menu_diseñadores">DISEÑADOR</string>
+    <string name="menu_contacto">CONTACTO</string>
+    <string name="menu_concurso">CONCURSO</string>
+    <string name="menu_registro">REGISTRO</string>
+    <string name="menu_iniciosesion">INICIA SESIÓN</string>
+    <string name="menu_admin">GESTION ADMINISTRADOR</string>
+    <string name="menu_diseño">DISEÑO</string>
+    <string name="menu_algo">sd dfs</string>
+
+
+    <!-- Strings del Registro -->
+    <string name="registrouser">UserName *</string>
+    <string name="registroemail">Email *</string>
+    <string name="registrocontraseña">Contraseña *</string>
+    <string name="registrocontraseña2">Repita contraseña *</string>
+    <string name="registroRegistrar">Registrar</string>
+    <string name="registroRestablecer">Restablecer</string>
+
+
+    <!--GestionDiseñadores -->
+    <string name="alias">Alias</string>
+
+    <!--Gestión Diseños -->
+    <string name="nombre">Nombre</string>
+    <string name="imagen">imagen</string>
+
+    <!--Gestion usuarios -->
+    <string name="userName">Username</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="mail">Email</string>
+    <string name="modificar">Modificar</string>
+    <string name="cerrarsesion">Cerrar sesión</string>
+    <string name="guardar">Guardar cambios</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="perfil">PERFIL</string>
+
+
+    <!--Gestion Configuración -->
+    <string name="fechalimite">Fecha Límite </string>
+    <string name="adminPass">Contraseña Administrador</string>
+    <string name="adminUser">Username Administrador</string>
+
+    <!--Actividad de Loggin -->
+    <string name="usuario">Usuario</string>
+    <string name="pass">Contraseña</string>
+    <string name="acceder"></string>
+
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="name">Nombre</string>
+    <string name="last_name">Apellidos</string>
+    <string name="verfication_code">Código de verificación</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Strings para validaciones del usuario -->
+    <string name="usucontravacio">El usuario o la contraseña no pueden estar vacíos</string>
+    <string name="nousuario">El usuario o la contraseña no son correctos</string>
+    <string name="Redirigiendo2">Pruebatoast2</string>
+    <string name="toast1"></string>
+    <string name="toast3">Las constraseñas no coinciden</string>
+
+    <string name="nombre1">El usuario es obligatorio</string>
+    <string name="nombre2">El usuario debe tener entre 1 y 20 caracteres</string>
+    <string name="nombre3">El usuario solo puede contenter números y letras</string>
+
+    <string name="mail1">El mail no puede estar vacío</string>
+    <string name="mail2">El mail debe tener entre 5 y 40 caracteres</string>
+    <string name="mail3">El mail solo puede contenter números, letras, (_), (@), (.)</string>
+
+    <string name="contra1">La contraseña es obligatoria</string>
+    <string name="contra2">La contraseña debe tener entre 1 y 10 caracteres</string>
+    <string name="contra3">La contraseña solo puede contenter números y letras </string>
+
+    <string name="usuariorepe">Ya existe un usuario con ese nombre</string>
+
+
+</resources>

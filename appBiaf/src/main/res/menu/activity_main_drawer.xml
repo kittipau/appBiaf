@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/menu_home"
+            />
+        <item
+            android:id="@+id/nav_concurso"
+            android:title="@string/menu_concurso_nav" />
+        <item
+            android:id="@+id/nav_disenadores"
+            android:title="@string/menu_disenadores" />
+        <item
+            android:id="@+id/nav_disenos"
+            android:title="@string/menu_diseno" />
+        <item
+            android:id="@+id/nav_votacion"
+            android:title="@string/menu_votaciones" />
+
+        <item
+            android:id="@+id/nav_SobreNosotros"
+            android:title="@string/menu_sobrenosotros" />
+
+
+    </group>
+
+    <group android:id="@+id/group_menu"
+        >
+        <item
+            android:id="@+id/nav_iniciosesion"
+            android:icon="@drawable/usuario"
+            android:title="" />
+        <item
+            android:id="@+id/nav_scanner"
+            android:icon="@drawable/qr"
+            android:title="" />
+    </group>
+</menu>
